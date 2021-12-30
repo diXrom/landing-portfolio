@@ -1,0 +1,22 @@
+/*========================== Typography =================================================================*/
+$black: #000000;
+$whire: #ffffff;
+$gold: #bdae82;
+
+@font-face {
+  font-family: Merriweather;
+  src: url("../assets/fonts/MerriweatherSans-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+}
+/*========================== Normalize =================================================================*/
+@import "_normalize";
