@@ -1,0 +1,29 @@
+.header {
+  background: url(../assets/img/bg1.jpg) no-repeat center 0;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav {
+  margin-left: auto;
+  &__list {
+    display: flex;
+  }
+  &__link {
+    list-style: none;
+    margin-right: 30px;
+    a {
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+}
+.lang {
+  &__en {
+    color: $gold;
+  }
+}
