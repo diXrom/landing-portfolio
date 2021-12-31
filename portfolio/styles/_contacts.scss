@@ -1,0 +1,65 @@
+.contacts {
+  background: url("../assets/img/bg2.jpg") center center/auto 700px no-repeat;
+  &__inner {
+    display: flex;
+    justify-content: end;
+    padding: 60px 0 195px 0;
+    .form {
+      display: flex;
+      width: 450px;
+      flex-direction: column;
+      row-gap: 20px;
+      &__title {
+        padding-bottom: 20px;
+
+        font-family: Merriweather;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 80px;
+        color: $gold;
+      }
+      &__email {
+        height: 50px;
+
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid $gold;
+        &::placeholder {
+          padding: 5px 17px;
+          font-family: inherit;
+          font-size: 20px;
+          line-height: 40px;
+          color: $gold;
+        }
+      }
+      &__tel {
+        height: 50px;
+
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid $gold;
+        &::placeholder {
+          padding: 5px 17px;
+          font-family: inherit;
+          font-size: 20px;
+          line-height: 40px;
+          color: $gold;
+        }
+      }
+      &__textarea {
+        height: 100px;
+        margin-bottom: 10px;
+
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid $gold;
+
+        resize: none;
+        &::placeholder {
+          padding: 2px 17px;
+          font-family: inherit;
+          font-size: 20px;
+          line-height: 40px;
+          color: $gold;
+        }
+      }
+    }
+  }
+}

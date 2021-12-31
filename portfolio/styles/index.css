@@ -565,7 +565,7 @@ body {
 
 /*========================== PRICE =======================================================================*/
 .price__inner {
-  padding-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .price__inner .title {
@@ -658,4 +658,156 @@ body {
   font-size: 18px;
   line-height: 36px;
   padding-bottom: 20px;
+}
+
+/*========================== CONTACTS =======================================================================*/
+.contacts {
+  background: url("../assets/img/bg2.jpg") center center/auto 700px no-repeat;
+}
+
+.contacts__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 60px 0 195px 0;
+}
+
+.contacts__inner .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 450px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+
+.contacts__inner .form__title {
+  padding-bottom: 20px;
+  font-family: Merriweather;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 80px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__email {
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #bdae82;
+}
+
+.contacts__inner .form__email::-webkit-input-placeholder {
+  padding: 5px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__email:-ms-input-placeholder {
+  padding: 5px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__email::-ms-input-placeholder {
+  padding: 5px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__email::placeholder {
+  padding: 5px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__tel {
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #bdae82;
+}
+
+.contacts__inner .form__tel::-webkit-input-placeholder {
+  padding: 5px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__tel:-ms-input-placeholder {
+  padding: 5px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__tel::-ms-input-placeholder {
+  padding: 5px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__tel::placeholder {
+  padding: 5px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__textarea {
+  height: 100px;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #bdae82;
+  resize: none;
+}
+
+.contacts__inner .form__textarea::-webkit-input-placeholder {
+  padding: 2px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__textarea:-ms-input-placeholder {
+  padding: 2px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__textarea::-ms-input-placeholder {
+  padding: 2px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
+}
+
+.contacts__inner .form__textarea::placeholder {
+  padding: 2px 17px;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 40px;
+  color: #bdae82;
 }
