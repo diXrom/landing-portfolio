@@ -300,6 +300,39 @@ body {
   color: #ffffff;
 }
 
+.title {
+  position: relative;
+  padding-bottom: 60px;
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 80px;
+  text-align: center;
+  color: #bdae82;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 274px;
+  position: absolute;
+  top: 28%;
+  right: 25%;
+  background-color: #bdae82;
+}
+
+.title::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 274px;
+  position: absolute;
+  top: 28%;
+  left: 25%;
+  background-color: #bdae82;
+}
+
 /*========================== HEADER ======================================================================*/
 .header {
   background: url(../assets/img/bg1.jpg) no-repeat center 0;
@@ -326,7 +359,7 @@ body {
 
 .nav__link {
   list-style: none;
-  margin-right: 32px;
+  margin-right: 31px;
 }
 
 .nav__link a {
@@ -371,4 +404,53 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 40px;
+}
+
+/*========================== SKILLS ======================================================================*/
+.skills__inner {
+  padding-top: 100px;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content__item {
+  padding-top: 95px;
+  max-width: 320px;
+  text-align: center;
+}
+
+.content__item:nth-child(1) {
+  background: url("../assets/svg/camera.svg") center top/62px 50px no-repeat;
+}
+
+.content__item:nth-child(2) {
+  background: url("../assets/svg/video.svg") center top/62px 50px no-repeat;
+}
+
+.content__item:nth-child(3) {
+  background: url("../assets/svg/image.svg") center top/62px 50px no-repeat;
+}
+
+.content__item:nth-child(4) {
+  background: url("../assets/svg/mic.svg") center top/62px 50px no-repeat;
+}
+
+.content__item__title {
+  margin-bottom: 15px;
+  letter-spacing: 0.4px;
+}
+
+.content__item__text {
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.4px;
 }
