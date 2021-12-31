@@ -290,6 +290,8 @@ body {
   border: 0;
   background-color: #bdae82;
   cursor: pointer;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .btn.active {
@@ -342,6 +344,11 @@ body {
 
 .lang__en {
   color: #bdae82;
+  cursor: pointer;
+}
+
+.lang__ru {
+  cursor: pointer;
 }
 
 .lang span:not(first-child) {
@@ -451,7 +458,7 @@ body {
 .content__item__text {
   font-size: 18px;
   line-height: 36px;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
 }
 
 /*========================== PORTFOLIO ===================================================================*/
@@ -698,12 +705,15 @@ body {
 
 .contacts__inner .form__email {
   height: 50px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 20px;
+  padding: 5px 17px;
   background: rgba(0, 0, 0, 0.5);
   border: 2px solid #bdae82;
 }
 
 .contacts__inner .form__email::-webkit-input-placeholder {
-  padding: 5px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;
@@ -711,7 +721,6 @@ body {
 }
 
 .contacts__inner .form__email:-ms-input-placeholder {
-  padding: 5px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;
@@ -719,7 +728,6 @@ body {
 }
 
 .contacts__inner .form__email::-ms-input-placeholder {
-  padding: 5px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;
@@ -727,7 +735,6 @@ body {
 }
 
 .contacts__inner .form__email::placeholder {
-  padding: 5px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;
@@ -736,12 +743,15 @@ body {
 
 .contacts__inner .form__tel {
   height: 50px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 20px;
+  padding: 5px 17px;
   background: rgba(0, 0, 0, 0.5);
   border: 2px solid #bdae82;
 }
 
 .contacts__inner .form__tel::-webkit-input-placeholder {
-  padding: 5px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;
@@ -749,7 +759,6 @@ body {
 }
 
 .contacts__inner .form__tel:-ms-input-placeholder {
-  padding: 5px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;
@@ -757,7 +766,6 @@ body {
 }
 
 .contacts__inner .form__tel::-ms-input-placeholder {
-  padding: 5px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;
@@ -765,7 +773,6 @@ body {
 }
 
 .contacts__inner .form__tel::placeholder {
-  padding: 5px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;
@@ -775,13 +782,16 @@ body {
 .contacts__inner .form__textarea {
   height: 100px;
   margin-bottom: 10px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 20px;
+  padding: 2px 17px;
   background: rgba(0, 0, 0, 0.5);
   border: 2px solid #bdae82;
   resize: none;
 }
 
 .contacts__inner .form__textarea::-webkit-input-placeholder {
-  padding: 2px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;
@@ -789,7 +799,6 @@ body {
 }
 
 .contacts__inner .form__textarea:-ms-input-placeholder {
-  padding: 2px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;
@@ -797,7 +806,6 @@ body {
 }
 
 .contacts__inner .form__textarea::-ms-input-placeholder {
-  padding: 2px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;
@@ -805,7 +813,6 @@ body {
 }
 
 .contacts__inner .form__textarea::placeholder {
-  padding: 2px 17px;
   font-family: inherit;
   font-size: 20px;
   line-height: 40px;

@@ -70,6 +70,7 @@ body {
   border: 0;
   background-color: $gold;
   cursor: pointer;
+  transition: color .3s ease-in-out;
 
   &.active {
     color: $gold;
