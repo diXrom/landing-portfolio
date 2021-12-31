@@ -232,7 +232,7 @@ template {
   display: none;
 }
 
-/*========================== PAGE =====================================================================*/
+/*========================== PAGE ======================================================================*/
 *,
 *::after,
 *::before {
@@ -285,7 +285,7 @@ body {
 
 .btn {
   height: 55px;
-  width: 222px;
+  width: 220px;
   font-family: inherit;
   border: 0;
   background-color: #bdae82;
@@ -293,44 +293,13 @@ body {
 }
 
 .btn.active {
+  color: #bdae82;
   background-color: transparent;
+  border: 2px solid #bdae82;
 }
 
 .btn:hover {
   color: #ffffff;
-}
-
-.title {
-  position: relative;
-  padding-bottom: 60px;
-  font-family: Merriweather;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 80px;
-  text-align: center;
-  color: #bdae82;
-}
-
-.title::after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 274px;
-  position: absolute;
-  top: 28%;
-  right: 25%;
-  background-color: #bdae82;
-}
-
-.title::before {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 274px;
-  position: absolute;
-  top: 28%;
-  left: 25%;
-  background-color: #bdae82;
 }
 
 /*========================== HEADER ======================================================================*/
@@ -407,8 +376,38 @@ body {
 }
 
 /*========================== SKILLS ======================================================================*/
-.skills__inner {
+.skills__inner .title {
+  position: relative;
   padding-top: 100px;
+  padding-bottom: 60px;
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 80px;
+  text-align: center;
+  color: #bdae82;
+}
+
+.skills__inner .title::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 274px;
+  position: absolute;
+  top: 58%;
+  right: 25%;
+  background-color: #bdae82;
+}
+
+.skills__inner .title::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 274px;
+  position: absolute;
+  top: 58%;
+  left: 25%;
+  background-color: #bdae82;
 }
 
 .content {
@@ -453,4 +452,59 @@ body {
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0.4px;
+}
+
+/*========================== PORTFOLIO ======================================================================*/
+.portfolio__inner .title {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 60px;
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 80px;
+  text-align: center;
+  color: #bdae82;
+}
+
+.portfolio__inner .title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 239px;
+  position: absolute;
+  top: 59.5%;
+  right: 25%;
+  background-color: #bdae82;
+}
+
+.portfolio__inner .title::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 239px;
+  position: absolute;
+  top: 59.5%;
+  left: 25%;
+  background-color: #bdae82;
+}
+
+.tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 60px;
+}
+
+.tabs-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }

@@ -20,7 +20,7 @@ $gold: #bdae82;
 }
 /*========================== Normalize =================================================================*/
 @import "_normalize";
-/*========================== PAGE =====================================================================*/
+/*========================== PAGE ======================================================================*/
 *,
 *::after,
 *::before {
@@ -63,7 +63,7 @@ body {
 }
 .btn {
   height: 55px;
-  width: 222px;
+  width: 220px;
 
   font-family: inherit;
 
@@ -72,49 +72,14 @@ body {
   cursor: pointer;
 
   &.active {
+    color: $gold;
+
     background-color: transparent;
+    border: 2px solid $gold;
   }
   &:hover {
     color: $white;
   }
-}
-.title {
-  position: relative;
-
-  padding-bottom: 60px;
-
-  font-family: Merriweather;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 80px;
-  text-align: center;
-  color: $gold;
-  &::after{
-    content: '';
-    display: block;
-    height: 2px;
-    width: 274px;
-  
-    position: absolute;
-    top: 28%;
-    right: 25%;
-
-    background-color:$gold;
-  }
-  &::before{
-    content: '';
-    display: block;
-    height: 2px;
-    width: 274px;
-  
-    position: absolute;
-    top: 28%;
-    left: 25%;
-
-    background-color:$gold;
-  }
-
-
 }
 
 /*========================== HEADER ======================================================================*/
@@ -123,3 +88,5 @@ body {
 @import "_hero";
 /*========================== SKILLS ======================================================================*/
 @import "_skills";
+/*========================== PORTFOLIO ======================================================================*/
+@import "_portfolio";

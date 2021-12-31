@@ -1,5 +1,40 @@
 .skills__inner {
-  padding-top: 100px;
+  .title {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 80px;
+    text-align: center;
+    color: $gold;
+    &::after{
+      content: '';
+      display: block;
+      height: 2px;
+      width: 274px;
+    
+      position: absolute;
+      top: 58%;
+      right: 25%;
+  
+      background-color:$gold;
+    }
+    &::before{
+      content: '';
+      display: block;
+      height: 2px;
+      width: 274px;
+    
+      position: absolute;
+      top: 58%;
+      left: 25%;
+  
+      background-color:$gold;
+    }
+  }
 }
 .content {
   display: flex;

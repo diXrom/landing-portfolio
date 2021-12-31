@@ -1,0 +1,50 @@
+.portfolio__inner {
+  .title {
+    position: relative;
+    padding-top: 110px;
+    padding-bottom: 60px;
+
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 80px;
+    text-align: center;
+    color: $gold;
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 239px;
+
+      position: absolute;
+      top: 59.5%;
+      right: 25%;
+
+      background-color: $gold;
+    }
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 239px;
+
+      position: absolute;
+      top: 59.5%;
+      left: 25%;
+
+      background-color: $gold;
+    }
+  }
+}
+.tabs{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.tabs-content{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
