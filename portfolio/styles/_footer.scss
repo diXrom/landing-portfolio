@@ -1,0 +1,40 @@
+.footer {
+  padding: 50px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    &-copy {
+      & span {
+        margin-right: 20px;
+      }
+      & a {
+        margin-right: 80px;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+          color: $gold;
+        }
+      }
+    }
+    &-rss {
+      a {
+        transition: color 0.3s ease-in-out;
+        &:hover {
+          color: $gold;
+        }
+      }
+    }
+    &-contacts {
+      ul {
+        display: flex;
+        margin: 0;
+        li {
+          list-style: none;
+          .icon {
+            width: 32px;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}

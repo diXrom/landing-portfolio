@@ -232,7 +232,7 @@ template {
   display: none;
 }
 
-/*========================== PAGE ======================================================================*/
+/*========================== PAGE/reset ======================================================================*/
 *,
 *::after,
 *::before {
@@ -344,8 +344,8 @@ body {
   color: #bdae82;
 }
 
-.lang span:not(:last-child) {
-  margin-right: 3.5px;
+.lang span:not(first-child) {
+  margin-left: 3.4px;
 }
 
 /*========================== HERO ========================================================================*/
@@ -660,7 +660,7 @@ body {
   padding-bottom: 20px;
 }
 
-/*========================== CONTACTS =======================================================================*/
+/*========================== CONTACTS ====================================================================*/
 .contacts {
   background: url("../assets/img/bg2.jpg") center center/auto 700px no-repeat;
 }
@@ -810,4 +810,57 @@ body {
   font-size: 20px;
   line-height: 40px;
   color: #bdae82;
+}
+
+/*========================== FOOTER ======================================================================*/
+.footer {
+  padding: 50px 0;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__inner-copy span {
+  margin-right: 20px;
+}
+
+.footer__inner-copy a {
+  margin-right: 80px;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer__inner-copy a:hover {
+  color: #bdae82;
+}
+
+.footer__inner-rss a {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer__inner-rss a:hover {
+  color: #bdae82;
+}
+
+.footer__inner-contacts ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.footer__inner-contacts ul li {
+  list-style: none;
+}
+
+.footer__inner-contacts ul li .icon {
+  width: 32px;
+  margin-left: 20px;
 }
