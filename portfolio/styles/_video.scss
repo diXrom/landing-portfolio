@@ -1,0 +1,55 @@
+.video__inner {
+  .title {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 60px;
+
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 80px;
+    text-align: center;
+    color: $gold;
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 274px;
+
+      position: absolute;
+      top: 58%;
+      right: 25%;
+
+      background-color: $gold;
+    }
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 274px;
+
+      position: absolute;
+      top: 58%;
+      left: 25%;
+
+      background-color: $gold;
+    }
+  }
+}
+.video-content {
+  position: relative;
+  &__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background: transparent;
+    border: 0;
+
+    .icon {
+      width: 130px;
+      height: 130px;
+      transform: translate(-54%,-57%);
+    }
+  }
+}
