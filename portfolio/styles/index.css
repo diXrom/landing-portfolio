@@ -562,3 +562,100 @@ body {
   -webkit-transform: translate(-54%, -57%);
           transform: translate(-54%, -57%);
 }
+
+/*========================== PRICE =======================================================================*/
+.price__inner {
+  padding-bottom: 100px;
+}
+
+.price__inner .title {
+  position: relative;
+  padding-top: 82px;
+  padding-bottom: 60px;
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 80px;
+  text-align: center;
+  color: #bdae82;
+}
+
+.price__inner .title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 277px;
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  background-color: #bdae82;
+}
+
+.price__inner .title::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 277px;
+  position: absolute;
+  top: 55%;
+  right: 25%;
+  background-color: #bdae82;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cards__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 450px;
+          flex: 0 1 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  padding: 40px 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 3px solid #bdae82;
+}
+
+.cards__item-header {
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 56px;
+}
+
+.cards__item-price {
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 48px;
+  color: #bdae82;
+}
+
+.cards__item-text {
+  font-family: Inter;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 36px;
+  padding-bottom: 20px;
+}

@@ -1,0 +1,79 @@
+.price__inner {
+    padding-bottom: 100px;
+  .title {
+    position: relative;
+    padding-top: 82px;
+    padding-bottom: 60px;
+
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 80px;
+    text-align: center;
+    color: $gold;
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 277px;
+
+      position: absolute;
+      top: 55%;
+      left: 25%;
+
+      background-color: $gold;
+    }
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 277px;
+
+      position: absolute;
+      top: 55%;
+      right: 25%;
+
+      background-color: $gold;
+    }
+  }
+}
+.cards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__item {
+    flex: 0 1 450px;
+    display: flex;
+    gap: 20px;
+    padding: 40px 0px;
+
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 3px solid $gold;
+    &-header {
+      font-family: Merriweather;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 56px;
+    }
+    &-price {
+      font-family: Merriweather;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 48px;
+
+      color: $gold;
+    }
+    &-text {
+      font-family: Inter;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 36px;
+      padding-bottom: 20px;
+    }
+  }
+}
