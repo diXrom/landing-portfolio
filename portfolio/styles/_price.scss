@@ -1,5 +1,8 @@
 .price__inner {
   margin-bottom: 100px;
+  @media (max-width: 768px) {
+    margin-bottom: 55px;
+  }
   .title {
     position: relative;
     padding-top: 82px;
@@ -15,29 +18,48 @@
     color: $gold;
 
     overflow-x: hidden;
+    @media (max-width: 768px) {
+      padding-top: 62px;
+      padding-bottom: 50px;
+      font-size: 22px;
+      width: 50%;
+      margin: 0 167px 0 187px;
+    }
     &::after {
       content: "";
       display: block;
       height: 2px;
-      width: 40%;
+      width: 39%;
 
       position: absolute;
-      top: 55%;
+      top: 58%;
       right: 0;
 
       background-color: $gold;
+      @media (max-width: 1268px) {
+        width: 33%;
+      }
+      @media (max-width: 768px) {
+        top: 53%;
+      }
     }
     &::before {
       content: "";
       display: block;
       height: 2px;
-      width: 40%;
+      width: 39%;
 
       position: absolute;
-      top: 55%;
+      top: 58%;
       left: 0;
 
       background-color: $gold;
+      @media (max-width: 1268px) {
+        width: 33%;
+      }
+      @media (max-width: 768px) {
+        top: 53%;
+      }
     }
   }
 }
@@ -46,6 +68,9 @@
   gap: 25px;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media (max-width: 1457px) {
+    justify-content: space-around;
+  }
   &__item {
     flex: 0 1 450px;
     display: flex;
@@ -58,6 +83,10 @@
     justify-content: space-between;
 
     border: 3px solid $gold;
+    @media (max-width: 768px) {
+      flex: 0 1 420px;
+      margin:0 0 25px 18px;
+    }
     &-header {
       font-family: Merriweather;
       font-weight: bold;

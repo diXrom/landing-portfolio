@@ -15,6 +15,13 @@
     color: $gold;
 
     overflow-x: hidden;
+    @media (max-width: 768px) {
+      padding-top: 80px;
+      padding-bottom: 50px;
+      font-size: 22px;
+      width: 50%;
+      margin: 0 167px 0 187px;
+    }
     &::after {
       content: "";
       display: block;
@@ -26,6 +33,12 @@
       right: 0;
 
       background-color: $gold;
+      @media (max-width: 1268px) {
+        width: 32%;
+      }
+      @media (max-width: 768px) {
+        top: 56.5%;
+      }
     }
     &::before {
       content: "";
@@ -38,11 +51,21 @@
       left: 0;
 
       background-color: $gold;
+      @media (max-width: 1268px) {
+        width: 32%;
+      }
+      @media (max-width: 768px) {
+        top: 56.5%;
+      }
     }
   }
 }
 .video-content {
   position: relative;
+  @media (max-width: 768px) {
+    margin: 0 -20px;
+    overflow-x: hidden;
+  }
   &__btn {
     position: absolute;
     top: 50%;
@@ -54,11 +77,24 @@
     .icon {
       width: 130px;
       height: 130px;
+      
       transform: translate(-54%, -57%);
+      @media (max-width: 768px) {
+        width: 65px;
+        height: 65px;
+
+        transform: translate(-49%, -64%);
+      }
     }
   }
   &__player {
-    width: 100%;
-    max-width: 1400;
+    @media (min-width: 769px) {
+      width: 100%;
+      max-width: 1400px;
+    }
+    @media (max-width: 768px) {
+      max-width: 808px;
+      height: 418px;
+    }
   }
 }
