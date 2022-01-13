@@ -1,8 +1,10 @@
 .skills__inner {
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
   .title {
     position: relative;
-  
-    
+
     padding-top: 100px;
     padding-bottom: 60px;
     width: 50%;
@@ -16,7 +18,13 @@
     color: $gold;
 
     overflow-x: hidden;
-
+    @media (max-width: 768px) {
+      padding-top: 50px;
+      padding-bottom: 44px;
+      font-size: 22px;
+      width: 55%;
+      margin: 0 167px 0 160px;
+    }
     &::after {
       content: "";
       display: block;
@@ -28,6 +36,12 @@
       right: 0;
 
       background-color: $gold;
+      @media (max-width: 1268px) {
+        width: 32%;
+      }
+      @media (max-width: 768px) {
+        top: 51%;
+      }
     }
     &::before {
       content: "";
@@ -40,6 +54,12 @@
       left: 0;
 
       background-color: $gold;
+      @media (max-width: 1268px) {
+        width: 32%;
+      }
+      @media (max-width: 768px) {
+        top: 51%;
+      }
     }
   }
 }
@@ -48,22 +68,39 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @media (max-width: 1337px) {
+    justify-content: space-around;
+    align-content: space-between;
+  }
   &__item {
     padding-top: 95px;
     max-width: 320px;
-
     text-align: center;
+    @media (max-width: 1337px) {
+      padding-bottom: 75px;
+    }
+    @media (max-width: 768px) {
+      padding-top: 76px;
+      width: 300px;
+    }
+
     &:nth-child(1) {
       background: url("../assets/svg/camera.svg") center top/62px 50px no-repeat;
     }
     &:nth-child(2) {
       background: url("../assets/svg/video.svg") center top/62px 50px no-repeat;
+      @media (max-width: 768px) {
+        margin-right: -15px;
+      }
     }
     &:nth-child(3) {
       background: url("../assets/svg/image.svg") center top/62px 50px no-repeat;
     }
     &:nth-child(4) {
       background: url("../assets/svg/mic.svg") center top/62px 50px no-repeat;
+      @media (max-width: 768px) {
+        margin-right: -15px;
+      }
     }
 
     &__title {
@@ -75,6 +112,10 @@
       font-size: 18px;
       line-height: 36px;
       letter-spacing: 0.2px;
+      @media (max-width: 768px) {
+        line-height: 22px;
+        letter-spacing: 0;
+      }
     }
   }
 }

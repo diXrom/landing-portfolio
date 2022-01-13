@@ -491,6 +491,12 @@ body {
 }
 
 /*========================== SKILLS ======================================================================*/
+@media (max-width: 768px) {
+  .skills__inner {
+    padding: 0 20px;
+  }
+}
+
 .skills__inner .title {
   position: relative;
   padding-top: 100px;
@@ -506,6 +512,16 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+  .skills__inner .title {
+    padding-top: 50px;
+    padding-bottom: 44px;
+    font-size: 22px;
+    width: 55%;
+    margin: 0 167px 0 160px;
+  }
+}
+
 .skills__inner .title::after {
   content: "";
   display: block;
@@ -515,6 +531,18 @@ body {
   top: 58%;
   right: 0;
   background-color: #bdae82;
+}
+
+@media (max-width: 1268px) {
+  .skills__inner .title::after {
+    width: 32%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills__inner .title::after {
+    top: 51%;
+  }
 }
 
 .skills__inner .title::before {
@@ -528,6 +556,18 @@ body {
   background-color: #bdae82;
 }
 
+@media (max-width: 1268px) {
+  .skills__inner .title::before {
+    width: 32%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills__inner .title::before {
+    top: 51%;
+  }
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -539,10 +579,32 @@ body {
       flex-wrap: wrap;
 }
 
+@media (max-width: 1337px) {
+  .content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+}
+
 .content__item {
   padding-top: 95px;
   max-width: 320px;
   text-align: center;
+}
+
+@media (max-width: 1337px) {
+  .content__item {
+    padding-bottom: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content__item {
+    padding-top: 76px;
+    width: 300px;
+  }
 }
 
 .content__item:nth-child(1) {
@@ -553,12 +615,24 @@ body {
   background: url("../assets/svg/video.svg") center top/62px 50px no-repeat;
 }
 
+@media (max-width: 768px) {
+  .content__item:nth-child(2) {
+    margin-right: -15px;
+  }
+}
+
 .content__item:nth-child(3) {
   background: url("../assets/svg/image.svg") center top/62px 50px no-repeat;
 }
 
 .content__item:nth-child(4) {
   background: url("../assets/svg/mic.svg") center top/62px 50px no-repeat;
+}
+
+@media (max-width: 768px) {
+  .content__item:nth-child(4) {
+    margin-right: -15px;
+  }
 }
 
 .content__item__title {
@@ -570,6 +644,13 @@ body {
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0.2px;
+}
+
+@media (max-width: 768px) {
+  .content__item__text {
+    line-height: 22px;
+    letter-spacing: 0;
+  }
 }
 
 /*========================== PORTFOLIO ===================================================================*/
@@ -588,37 +669,79 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+  .portfolio__inner .title {
+    padding-top: 85px;
+    padding-bottom: 50px;
+    font-size: 22px;
+    width: 50%;
+    margin: 0 167px 0 187px;
+  }
+}
+
 .portfolio__inner .title::after {
   content: "";
   display: block;
   height: 2px;
-  width: 34%;
+  width: 39%;
   position: absolute;
-  top: 59.5%;
+  top: 58%;
   right: 0;
   background-color: #bdae82;
+}
+
+@media (max-width: 1268px) {
+  .portfolio__inner .title::after {
+    width: 24%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio__inner .title::after {
+    top: 57.5%;
+  }
 }
 
 .portfolio__inner .title::before {
   content: "";
   display: block;
   height: 2px;
-  width: 34%;
+  width: 39%;
   position: absolute;
-  top: 59.5%;
+  top: 58%;
   left: 0;
   background-color: #bdae82;
+}
+
+@media (max-width: 1268px) {
+  .portfolio__inner .title::before {
+    width: 24%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio__inner .title::before {
+    top: 57.5%;
+  }
 }
 
 .tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 5px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .tabs__item {
+    margin-left: 18px;
+  }
 }
 
 .tabs-content {
@@ -628,6 +751,15 @@ body {
   gap: 25px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1456px) {
+  .tabs-content {
+    margin-left: 18px;
+  }
 }
 
 /*========================== VIDEO =======================================================================*/
