@@ -1,38 +1,45 @@
 .skills__inner {
   .title {
     position: relative;
+  
+    
     padding-top: 100px;
     padding-bottom: 60px;
-  
+    width: 50%;
+    margin: 0 auto;
+
     font-family: Merriweather;
     font-weight: bold;
     font-size: 26px;
     line-height: 80px;
     text-align: center;
     color: $gold;
-    &::after{
-      content: '';
+
+    overflow-x: hidden;
+
+    &::after {
+      content: "";
       display: block;
       height: 2px;
-      width: 274px;
-    
+      width: 39%;
+
       position: absolute;
       top: 58%;
-      right: 25%;
-  
-      background-color:$gold;
+      right: 0;
+
+      background-color: $gold;
     }
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       display: block;
       height: 2px;
-      width: 274px;
-    
+      width: 39%;
+
       position: absolute;
       top: 58%;
-      left: 25%;
-  
-      background-color:$gold;
+      left: 0;
+
+      background-color: $gold;
     }
   }
 }

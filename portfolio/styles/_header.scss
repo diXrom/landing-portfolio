@@ -1,8 +1,21 @@
 .header {
   background: url(../assets/img/bg1.jpg) no-repeat center 0;
+  @media (max-width: 768px) {
+    height: 30px;
+    background-position: -5px -30px;
+    background-size: auto 620px;
+  }
   &__inner {
+    @media (max-width: 768px) {
+      padding: 20px 28px;
+    }
     display: flex;
     align-items: center;
+    .icon {
+      @media (max-width: 768px) {
+        margin-left: 13px;
+      }
+    }
   }
 }
 
@@ -21,16 +34,54 @@
       }
     }
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .lang {
   &__en {
     color: $gold;
     cursor: pointer;
+    @media (max-width: 768px) {
+      margin-right: -10.6px;
+    }
   }
   &__ru {
     cursor: pointer;
   }
   span:not(first-child) {
     margin-left: 3.4px;
+    @media (max-width: 768px) {
+      margin-left: 15.4px;
+    }
+  }
+  @media (max-width: 768px) {
+    margin-left: auto;
+  }
+}
+.hamburger:hover {
+  cursor: pointer;
+}
+.hamburger:hover .line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger:hover .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger:hover .line:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+.hamburger .line {
+  display: none;
+  width: 50px;
+  height: 5px;
+  background-color: #ecf0f1;
+  margin: 8px 0 8px 20px;
+  transition: all 0.2s ease-in-out;
+
+  @media (max-width: 768px) {
+    display: block;
   }
 }

@@ -4,6 +4,8 @@
     position: relative;
     padding-top: 82px;
     padding-bottom: 60px;
+    width: 50%;
+    margin: 0 auto;
 
     font-family: Merriweather;
     font-weight: bold;
@@ -11,15 +13,17 @@
     line-height: 80px;
     text-align: center;
     color: $gold;
+
+    overflow-x: hidden;
     &::after {
       content: "";
       display: block;
       height: 2px;
-      width: 277px;
+      width: 40%;
 
       position: absolute;
       top: 55%;
-      left: 25%;
+      right: 0;
 
       background-color: $gold;
     }
@@ -27,11 +31,11 @@
       content: "";
       display: block;
       height: 2px;
-      width: 277px;
+      width: 40%;
 
       position: absolute;
       top: 55%;
-      right: 25%;
+      left: 0;
 
       background-color: $gold;
     }

@@ -48,9 +48,10 @@ body {
   background: $black;
 }
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+ 
 }
 .icon {
   width: 50px;
@@ -70,7 +71,7 @@ body {
   border: 0;
   background-color: $gold;
   cursor: pointer;
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 
   &.active {
     color: $gold;
