@@ -22,6 +22,11 @@
       width: 50%;
       margin: 0 167px 0 187px;
     }
+    @media (max-width: 750px) {
+      width: 50%;
+      margin: 0 auto;
+    }
+    
     &::after {
       content: "";
       display: block;
@@ -38,6 +43,9 @@
       }
       @media (max-width: 768px) {
         top: 56.5%;
+      }
+      @media (max-width: 700px) {
+        width: 25%;
       }
     }
     &::before {
@@ -56,6 +64,9 @@
       }
       @media (max-width: 768px) {
         top: 56.5%;
+      }
+      @media (max-width: 700px) {
+        width: 25%;
       }
     }
   }
