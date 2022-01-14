@@ -421,7 +421,6 @@ body {
   height: 100vh;
   width: 80%;
   right: -768px;
-  /* transform: translateX(137%); */
   -webkit-transition: right 0.5s ease-in-out;
   transition: right 0.5s ease-in-out;
   background: #000000;
@@ -430,8 +429,6 @@ body {
 @media (max-width: 768px) {
   .hamburger-nav {
     display: block;
-    width: 100%;
-    text-align: center;
   }
 }
 
@@ -471,7 +468,6 @@ body {
 
 .hamburger-nav.active {
   right: 0;
-  /* transform: translateX(17%); */
 }
 
 .lang__en {

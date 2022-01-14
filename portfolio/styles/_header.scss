@@ -60,20 +60,16 @@
   height: 100vh;
   width: 80%;
   right: -768px;
-  /* transform: translateX(137%); */
+
   transition: right 0.5s ease-in-out;
   
   @media (max-width: 768px) {
     display: block;
-    width: 100%;
-    text-align: center;
   }
   @media (max-width: 620px) {
     width: 100%;
-  
     text-align: center;
   }
-
   background: $black;
   &__list {
     display: flex;
@@ -95,7 +91,6 @@
 }
 .hamburger-nav.active {
   right: 0;
-  /* transform: translateX(17%); */
 }
 .lang {
   &__en {
