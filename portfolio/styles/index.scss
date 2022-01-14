@@ -20,7 +20,7 @@ $gold: #bdae82;
 }
 /*========================== Normalize =================================================================*/
 @import "_normalize";
-/*========================== PAGE/reset ======================================================================*/
+/*========================== PAGE/reset/tools ======================================================================*/
 *,
 *::after,
 *::before {
@@ -46,7 +46,9 @@ body {
   line-height: 50px;
   color: $white;
   background: $black;
-
+  @media (max-width: 768px) {
+    overflow-x: hidden;
+  }
 }
 .container {
   max-width: 1440px;
@@ -55,7 +57,6 @@ body {
   @media (max-width: 485px) {
     overflow-x: hidden;
   }
- 
 }
 .icon {
   width: 50px;
@@ -86,6 +87,12 @@ body {
   &:hover {
     color: $white;
   }
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
 
 /*========================== HEADER ======================================================================*/

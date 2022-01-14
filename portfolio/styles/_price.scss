@@ -40,6 +40,10 @@
       right: 0;
 
       background-color: $gold;
+      @media (min-width: 1269px) {
+        width: 40%;
+        top: 54.5%;
+      }
       @media (max-width: 1268px) {
         width: 33%;
       }
@@ -61,6 +65,10 @@
       left: 0;
 
       background-color: $gold;
+      @media (min-width: 1269px) {
+        width: 40%;
+        top: 54.5%;
+      }
       @media (max-width: 1268px) {
         width: 33%;
       }
