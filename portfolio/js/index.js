@@ -30,8 +30,8 @@ function changeLanguage() {
     langBtns.addEventListener('click', (e) => {
         const target = e.target;
         if (!target.closest('.lang__item')) return;
-        localStorage.setItem('lang', target.innerHTML);
-        switchingLanguage(target.innerHTML)
+        localStorage.setItem('lang', target.innerHTML.toLowerCase());
+        switchingLanguage(target.innerHTML.toLowerCase())
     });
     function switchingLanguage(lang) {
         const texts = document.querySelectorAll('[data-i18]'),
