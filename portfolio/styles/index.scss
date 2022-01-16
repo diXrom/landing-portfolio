@@ -73,16 +73,17 @@ body {
 
   font-family: inherit;
 
-  border: 0;
-  background-color: $gold;
+  background-color: transparent;
+  border: 2px solid $gold;
+  color: $gold;
+  
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 
   &.active {
-    color: $gold;
-
-    background-color: transparent;
-    border: 2px solid $gold;
+    background-color: $gold;
+    border: 0;
+    color: $black;
   }
   &:hover {
     color: $white;

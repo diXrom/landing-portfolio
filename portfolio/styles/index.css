@@ -300,17 +300,18 @@ body {
   height: 55px;
   width: 220px;
   font-family: inherit;
-  border: 0;
-  background-color: #bdae82;
+  background-color: transparent;
+  border: 2px solid #bdae82;
+  color: #bdae82;
   cursor: pointer;
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
 .btn.active {
-  color: #bdae82;
-  background-color: transparent;
-  border: 2px solid #bdae82;
+  background-color: #bdae82;
+  border: 0;
+  color: #000000;
 }
 
 .btn:hover {

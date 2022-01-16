@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/index.css">
+    <script async src="js/cash.js"></script>
     <script defer src="js/index.js"></script>
     <title>Portfolio</title>
 </head>
@@ -55,7 +56,7 @@
                     <div class="hero__text">Save sincere emotions, romantic feelings and happy moments of life together
                         with
                         professional photographer Alexa Rise</div>
-                    <button class="btn">Hire me</button>
+                    <button class="btn active">Hire me</button>
                 </div>
             </div>
         </section>
@@ -96,21 +97,21 @@
                     </div>
                     <div class="tabs">
                         <div class="tabs__item">
-                            <button class="btn active">Winter</button>
-                            <button class="btn active">Spring</button>
+                            <button class="btn" data-season="winter">Winter</button>
+                            <button class="btn" data-season="spring">Spring</button>
                         </div>
                         <div class="tabs__item">
-                            <button class="btn active">Summer</button>
-                            <button class="btn">Autumn</button>
+                            <button class="btn" data-season="summer">Summer</button>
+                            <button class="btn active" data-season="autumn">Autumn</button>
                         </div>
                     </div>
                     <div class="tabs-content">
-                        <img src="assets/img/img1.jpg" alt="photo">
-                        <img src="assets/img/img2.jpg" alt="photo">
-                        <img src="assets/img/img3.jpg" alt="photo">
-                        <img src="assets/img/img4.jpg" alt="photo">
-                        <img src="assets/img/img5.jpg" alt="photo">
-                        <img src="assets/img/img6.jpg" alt="photo">
+                        <img src="assets/img/autumn/1.jpg" alt="photo">
+                        <img src="assets/img/autumn/2.jpg" alt="photo">
+                        <img src="assets/img/autumn/3.jpg" alt="photo">
+                        <img src="assets/img/autumn/4.jpg" alt="photo">
+                        <img src="assets/img/autumn/5.jpg" alt="photo">
+                        <img src="assets/img/autumn/6.jpg" alt="photo">
                     </div>
                 </div>
             </div>
@@ -123,7 +124,7 @@
                     </div>
                     <div class="video-content">
                         <img class="video-content__player" src="assets/img/video_player.jpg" alt="video">
-                        <button class="video-content__btn"><svg class="icon">
+                        <button class="video-content__btn active"><svg class="icon">
                                 <use xlink:href="assets/svg/sprite.svg#play_unvisited"></use>
                             </svg></button>
                     </div>
@@ -146,7 +147,7 @@
                                 Readiness 2-3 weeks <br>
                                 Make up, visage <br>
                             </div>
-                            <button class="btn">Order shooting</button>
+                            <button class="btn active">Order shooting</button>
                         </div>
                         <div class="cards__item">
                             <div class="cards__item-header">Premium</div>
@@ -157,7 +158,7 @@
                                 Readiness 1-2 weeks <br>
                                 Make up, visage <br>
                             </div>
-                            <button class="btn">Order shooting</button>
+                            <button class="btn active">Order shooting</button>
                         </div>
                         <div class="cards__item">
                             <div class="cards__item-header">Gold</div>
@@ -168,7 +169,7 @@
                                 Readiness 1 week <br>
                                 Make up, visage, hairstyle <br>
                             </div>
-                            <button class="btn">Order shooting</button>
+                            <button class="btn active">Order shooting</button>
                         </div>
                     </div>
                 </div>
@@ -182,7 +183,7 @@
                         <input class="form__email" type="email" name="email" placeholder="E-mail" required>
                         <input class="form__tel" type="tel" name="tel" placeholder="Phone" required>
                         <textarea class="form__textarea" name="message" placeholder="Message"></textarea>
-                        <button class="btn" type="submit" name="submit">Send message</button>
+                        <button class="btn active" type="submit" name="submit">Send message</button>
                     </form>
                 </div>
             </div>
