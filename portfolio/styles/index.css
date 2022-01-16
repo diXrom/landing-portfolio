@@ -645,7 +645,7 @@ body {
   content: "";
   display: block;
   height: 2px;
-  width: 39%;
+  width: 36%;
   position: absolute;
   top: 58%;
   right: 0;
@@ -674,7 +674,7 @@ body {
   content: "";
   display: block;
   height: 2px;
-  width: 39%;
+  width: 36%;
   position: absolute;
   top: 58%;
   left: 0;
@@ -836,7 +836,7 @@ body {
 
 @media (min-width: 1269px) {
   .portfolio__inner .title::after {
-    width: 34%;
+    width: 31%;
     top: 59.5%;
   }
 }
@@ -863,7 +863,7 @@ body {
   content: "";
   display: block;
   height: 2px;
-  width: 39%;
+  width: 34%;
   position: absolute;
   top: 58%;
   left: 0;
@@ -872,7 +872,7 @@ body {
 
 @media (min-width: 1269px) {
   .portfolio__inner .title::before {
-    width: 34%;
+    width: 31%;
     top: 59.5%;
   }
 }
@@ -1127,7 +1127,7 @@ body {
   height: 2px;
   width: 39%;
   position: absolute;
-  top: 58%;
+  top: 56%;
   right: 0;
   background-color: #bdae82;
 }
@@ -1163,7 +1163,7 @@ body {
   height: 2px;
   width: 39%;
   position: absolute;
-  top: 58%;
+  top: 56%;
   left: 0;
   background-color: #bdae82;
 }

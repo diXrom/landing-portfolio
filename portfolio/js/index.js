@@ -18,6 +18,29 @@ console.log(`
 4. Дополнительный функционал: выбранный пользователем язык отображения страницы и светлая или тёмная тема сохраняются при перезагрузке страницы +5
 5. Дополнительный функционал: сложные эффекты для кнопок при наведении и/или клике +5
 `);
+import i18Obj from './translate.js';
+
+function changeLanguage() {
+    const langBtns = document.querySelector('.lang');
+
+    if (localStorage.getItem('lang')) {
+        switchingLanguage(localStorage.getItem('lang'))
+    }
+
+    langBtns.addEventListener('click', (e) => {
+        const target = e.target;
+        if (!target.closest('.lang__item')) return;
+        localStorage.setItem('lang', target.innerHTML);
+        switchingLanguage(target.innerHTML)
+    });
+    function switchingLanguage(lang) {
+        const texts = document.querySelectorAll('[data-i18]'),
+            forms = document.querySelectorAll("[data-i19]");
+        texts.forEach(item => item.textContent = i18Obj[lang][item.dataset.i18]);
+        forms.forEach(item => item.setAttribute('placeholder',i18Obj[lang][item.dataset.i19]))
+    }
+}
+changeLanguage();
 function showBurgerMenu() {
     const hamburger = document.querySelector('.hamburger'),
         lang = document.querySelector('.lang'),
@@ -52,15 +75,16 @@ function toggleTabs() {
 
     function showTabsImages(selector, localItem) {
         btns.forEach(item => item.classList.remove(selector));
-        document.querySelector(`[data-season=${localItem}]`).classList.add(selector);
+        document.querySelector(`[data-i18=${localItem}]`).classList.add(selector);
         tabContents.forEach((item, i) => item.src = `./assets/img/${localItem}/${++i}.jpg`)
     }
 
     tabsBtn.addEventListener('click', (e) => {
         const target = e.target;
         if (!target.closest('.btn')) return;
-        localStorage.setItem('season', target.dataset.season);
+        localStorage.setItem('season', target.dataset.i18);
         showTabsImages('active', localStorage.getItem('season'));
     });
 }
 toggleTabs();
+
