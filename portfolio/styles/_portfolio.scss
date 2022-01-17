@@ -1,3 +1,14 @@
+.portfolio.light-theme {
+  .btn {
+    background: $gold;
+    color: $mate;
+    &.active,
+    &:hover {
+      background: $mate;
+      color: $gold;
+    }
+  }
+}
 .portfolio__inner {
   .title {
     position: relative;
@@ -53,7 +64,6 @@
       @media (max-width: 700px) {
         width: 25%;
       }
-      
     }
     &::before {
       content: "";

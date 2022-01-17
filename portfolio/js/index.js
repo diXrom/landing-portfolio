@@ -21,23 +21,26 @@ console.log(`
 import i18Obj from './translate.js';
 
 function changeLanguage() {
-    const langBtns = document.querySelector('.lang');
+    const langBtn = document.querySelector('.lang'),
+        langBtns = document.querySelectorAll('.lang__item');
 
     if (localStorage.getItem('lang')) {
         switchingLanguage(localStorage.getItem('lang'))
     }
 
-    langBtns.addEventListener('click', (e) => {
+    langBtn.addEventListener('click', (e) => {
         const target = e.target;
         if (!target.closest('.lang__item')) return;
-        localStorage.setItem('lang', target.innerHTML.toLowerCase());
-        switchingLanguage(target.innerHTML.toLowerCase())
+        localStorage.setItem('lang', target.innerHTML);
+        switchingLanguage(target.innerHTML)
     });
     function switchingLanguage(lang) {
         const texts = document.querySelectorAll('[data-i18]'),
             forms = document.querySelectorAll("[data-i19]");
+        langBtns.forEach(item => item.classList.remove('active'))
+        document.querySelector(`.lang__${lang}`).classList.add('active');
         texts.forEach(item => item.textContent = i18Obj[lang][item.dataset.i18]);
-        forms.forEach(item => item.setAttribute('placeholder',i18Obj[lang][item.dataset.i19]))
+        forms.forEach(item => item.setAttribute('placeholder', i18Obj[lang][item.dataset.i19]))
     }
 }
 changeLanguage();
@@ -87,4 +90,34 @@ function toggleTabs() {
     });
 }
 toggleTabs();
+function changeTheme() {
+    const sections = document.querySelectorAll('section'),
+        icons = document.querySelectorAll('.icon'),
+        title = document.querySelectorAll('.title'),
+        header = document.querySelector('header'),
+        footer = document.querySelector('footer'),
+        iconBtn = document.querySelector('.icon-btn'),
+        iconSvg = document.querySelector('.icon-link'),
+        arrItems = [...sections, ...icons, ...title, header, footer, iconBtn];
+
+    iconBtn.addEventListener('click', () => {
+        if (iconBtn.classList.contains('light-theme')) {
+            toggleTheme('sun');
+            localStorage.setItem('theme', 'sun');
+            return;
+        }
+        toggleTheme('moon');
+        localStorage.setItem('theme', 'moon');
+    });
+
+    function toggleTheme(theme) {
+        iconSvg.setAttribute('xlink:href', `assets/svg/sprite.svg#${theme}`);
+        arrItems.forEach(item => item.classList.toggle('light-theme'));
+    }
+    if (localStorage.getItem('theme')) {
+        toggleTheme(localStorage.getItem('theme'));
+    }
+}
+changeTheme();
+
 

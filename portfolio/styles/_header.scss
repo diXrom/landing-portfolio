@@ -17,6 +17,33 @@
         margin-left: 13px;
       }
     }
+    .icon-btn {
+      height: 45px;
+      width: 45px;
+      margin-left: 25px;
+
+      fill: $white;
+      transition: fill 0.3s ease-in-out;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        margin-left: 13px;
+      }
+      &:hover {
+        fill: $gold;
+      }
+      &.light-theme {
+        fill: $mate;
+        height: 40px;
+        width: 40px;
+        background: transparent;
+
+        &:hover {
+          fill: $gold;
+        }
+      }
+      
+    }
     @media (max-width: 350px) {
       flex-wrap: wrap;
       justify-content: start;
@@ -27,6 +54,29 @@
       @media (max-width: 350px) {
         flex: 1 1 100%;
       }
+    }
+  }
+  &.light-theme {
+    background: white url(../assets/img/bg1-white.jpg) no-repeat center 0;
+    @media (max-width: 768px) {
+      height: 30px;
+      background-position: -5px -30px;
+      background-size: auto 620px;
+    }
+    .nav a {
+      color: $mate;
+      &:hover {
+        color: $white;
+      }
+    }
+    .lang__item.active {
+      color: $white;
+    }
+    .line {
+      background-color: $mate;
+    }
+    .hamburger-nav {
+      background-color: $white;
     }
   }
 }
@@ -62,7 +112,7 @@
   right: -768px;
 
   transition: right 0.5s ease-in-out;
-  
+
   @media (max-width: 768px) {
     display: block;
   }
@@ -94,14 +144,23 @@
 }
 .lang {
   &__en {
-    color: $gold;
     cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
     @media (max-width: 768px) {
       margin-right: -10.6px;
     }
+    &.active {
+      color: $gold;
+    }
   }
   &__ru {
+    text-transform: uppercase;
+    font-weight: 700;
     cursor: pointer;
+    &.active {
+      color: $gold;
+    }
   }
   span:not(first-child) {
     margin-left: 3.4px;
@@ -131,7 +190,7 @@
   display: none;
   width: 50px;
   height: 3px;
-  background-color: #ecf0f1;
+  background-color: $white;
   margin: 8px 0 8px 20px;
   transition: transform 0.3s ease-in-out;
 
