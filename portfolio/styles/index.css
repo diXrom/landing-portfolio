@@ -313,8 +313,10 @@ body {
   border: 2px solid #bdae82;
   color: #bdae82;
   cursor: pointer;
-  -webkit-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .btn.active {
@@ -324,7 +326,10 @@ body {
 }
 
 .btn:hover {
-  color: #ffffff;
+  -webkit-box-shadow: 0 1em 1.5em -0.4em #6085ff;
+          box-shadow: 0 1em 1.5em -0.4em #6085ff;
+  -webkit-transform: translatey(-0.65em);
+          transform: translatey(-0.65em);
 }
 
 .hide {
@@ -708,6 +713,8 @@ body {
 .hero.light-theme .btn.active:hover {
   background: #1c1c1c;
   color: #bdae82;
+  -webkit-box-shadow: 0 1em 1.5em -0.4em #6085ff;
+          box-shadow: 0 1em 1.5em -0.4em #6085ff;
 }
 
 /*========================== SKILLS ======================================================================*/
@@ -1644,6 +1651,8 @@ body {
 .contacts.light-theme .btn.active:hover {
   background: #1c1c1c;
   color: #bdae82;
+  -webkit-box-shadow: 0 1em 1.5em -0.4em #6085ff;
+          box-shadow: 0 1em 1.5em -0.4em #6085ff;
 }
 
 /*========================== FOOTER ======================================================================*/
