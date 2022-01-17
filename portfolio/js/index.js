@@ -48,12 +48,14 @@ function showBurgerMenu() {
     const hamburger = document.querySelector('.hamburger'),
         lang = document.querySelector('.lang'),
         hamburgerNav = document.querySelector('.hamburger-nav'),
+        iconBtn = document.querySelector('.icon-btn'),
         hamburgerList = document.querySelector('.hamburger-nav__list');
 
     const toogleMenu = () => {
         hamburgerNav.classList.toggle('active');
         hamburger.classList.toggle('active');
         lang.classList.toggle('hide');
+        iconBtn.classList.toggle('hide');
     }
 
     hamburger.addEventListener('click', toogleMenu);
@@ -63,6 +65,7 @@ function showBurgerMenu() {
             hamburgerNav.classList.remove('active');
             hamburger.classList.remove('active');
             lang.classList.remove('hide');
+            iconBtn.classList.remove('hide');
         }
     });
 }
