@@ -326,6 +326,7 @@ body {
 }
 
 .btn:hover {
+  color: #ffffff;
   -webkit-box-shadow: 0 1em 1.5em -0.4em #6085ff;
           box-shadow: 0 1em 1.5em -0.4em #6085ff;
   -webkit-transform: translatey(-0.65em);

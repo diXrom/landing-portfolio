@@ -94,6 +94,7 @@ body {
     color: $black;
   }
   &:hover {
+    color:$white;
     box-shadow: 0 1em 1.5em -0.4em #6085ff;
     transform: translatey(-0.65em);
   }
