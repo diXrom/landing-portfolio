@@ -53,7 +53,6 @@
       @media (max-width: 700px) {
         width: 25%;
       }
-      
     }
     &::before {
       content: "";
@@ -105,5 +104,11 @@
   justify-content: center;
   @media (max-width: 1456px) {
     margin-left: 18px;
+  }
+  img {
+    @media (max-width: 480px) {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }

@@ -18,15 +18,10 @@
       }
     }
     @media (max-width: 350px) {
-      flex-wrap: wrap;
-      justify-content: start;
-      text-align: start;
-      align-items: start;
-    }
-    & > * {
-      @media (max-width: 350px) {
-        flex: 1 1 100%;
-      }
+      justify-content: center;
+      text-align: center;
+      align-items: flex-start;
+      flex-direction: column;
     }
   }
 }
@@ -62,7 +57,7 @@
   right: -768px;
 
   transition: right 0.5s ease-in-out;
-  
+
   @media (max-width: 768px) {
     display: block;
   }
@@ -111,6 +106,9 @@
   }
   @media (max-width: 768px) {
     margin-left: auto;
+  }
+  @media (max-width: 350px) {
+    margin-left: 0;
   }
 }
 .hamburger:hover {
