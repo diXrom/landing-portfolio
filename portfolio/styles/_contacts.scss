@@ -1,9 +1,19 @@
 .contacts {
   background: url("../assets/img/bg2.jpg") center center/auto 700px no-repeat;
+
+  @media (max-width: 768px) {
+    background-size: 1200px 600px;
+    background-position: center 43px;
+  }
   &__inner {
     display: flex;
     justify-content: end;
     padding: 60px 0 195px 0;
+    @media (max-width: 768px) {
+      justify-content: center;
+      padding: 102px 0px 118px 17px;
+      text-align: center;
+    }
     .form {
       display: flex;
       width: 450px;
@@ -17,6 +27,10 @@
         font-weight: 700;
         line-height: 80px;
         color: $gold;
+        @media (max-width: 768px) {
+          font-size: 32px;
+          line-height: 64px;
+        }
       }
       &__email {
         height: 50px;
@@ -29,7 +43,6 @@
         background: rgba(0, 0, 0, 0.5);
         border: 2px solid $gold;
         &::placeholder {
-          
           font-family: inherit;
           font-size: 20px;
           line-height: 40px;
@@ -71,6 +84,11 @@
           font-size: 20px;
           line-height: 40px;
           color: $gold;
+        }
+      }
+      .btn {
+        @media (max-width: 768px) {
+          margin-left: 115px;
         }
       }
     }

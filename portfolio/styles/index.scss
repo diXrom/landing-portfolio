@@ -20,7 +20,7 @@ $gold: #bdae82;
 }
 /*========================== Normalize =================================================================*/
 @import "_normalize";
-/*========================== PAGE/reset ======================================================================*/
+/*========================== PAGE/reset/tools ======================================================================*/
 *,
 *::after,
 *::before {
@@ -46,11 +46,17 @@ body {
   line-height: 50px;
   color: $white;
   background: $black;
+  @media (max-width: 768px) {
+    overflow-x: hidden;
+  }
 }
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+  @media (max-width: 485px) {
+    overflow-x: hidden;
+  }
 }
 .icon {
   width: 50px;
@@ -70,7 +76,7 @@ body {
   border: 0;
   background-color: $gold;
   cursor: pointer;
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 
   &.active {
     color: $gold;
@@ -81,6 +87,12 @@ body {
   &:hover {
     color: $white;
   }
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
 
 /*========================== HEADER ======================================================================*/

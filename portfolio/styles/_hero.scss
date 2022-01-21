@@ -2,15 +2,29 @@
   background-image: url("../assets/img/bg1.jpg");
   background-position: center -90px;
   background-repeat: no-repeat;
+  @media (max-width: 768px) {
+    height: 590px;
+    background-position: -5px -60px;
+    background-size: auto 620px;
+  }
   &__inner {
     padding: 157px 0 330px 59px;
     max-width: 549px;
+    @media (max-width: 768px) {
+      padding: 157px 100px 330px 40px;
+    }
   }
   &__title {
     font-family: Merriweather, serif;
     font-weight: bold;
     font-size: 60px;
     line-height: 131px;
+    @media (max-width: 768px) {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 26px;
+      padding-bottom: 40px;
+    }
   }
   &__text {
     margin-bottom: 27px;
@@ -19,6 +33,9 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 40px;
+    @media (max-width: 768px) {
+      line-height: 24px;
+      padding-bottom: 32px;
+    }
   }
-  
 }

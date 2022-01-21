@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/index.css">
-    <script src="js/index.js"></script>
+    <script defer src="js/index.js"></script>
     <title>Portfolio</title>
 </head>
 
@@ -18,7 +18,7 @@
                 <svg class="icon">
                     <use xlink:href="assets/svg/sprite.svg#logo"></use>
                 </svg>
-                <nav class="nav">
+                <nav class="nav ">
                     <ul class="nav__list">
                         <li class="nav__link"><a href="#skills">Skills</a></li>
                         <li class="nav__link"><a href="#portfolio">Portfolio</a></li>
@@ -30,6 +30,20 @@
                 <div class="lang">
                     <span class="lang__en">en</span> <span>/</span> <span class="lang__ru">ru</span>
                 </div>
+                <div class="hamburger" id="hamburger-1">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+                <nav class="hamburger-nav">
+                    <ul class="hamburger-nav__list">
+                        <li class="hamburger-nav__link"><a href="#skills">Skills</a></li>
+                        <li class="hamburger-nav__link"><a href="#portfolio">Portfolio</a></li>
+                        <li class="hamburger-nav__link"><a href="#video">Video</a></li>
+                        <li class="hamburger-nav__link"><a href="#price">Price</a></li>
+                        <li class="hamburger-nav__link"><a href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
@@ -81,10 +95,14 @@
                         <h2>Portfolio</h2>
                     </div>
                     <div class="tabs">
-                        <button class="btn active">Winter</button>
-                        <button class="btn active">Spring</button>
-                        <button class="btn active">Summer</button>
-                        <button class="btn">Autumn</button>
+                        <div class="tabs__item">
+                            <button class="btn active">Winter</button>
+                            <button class="btn active">Spring</button>
+                        </div>
+                        <div class="tabs__item">
+                            <button class="btn active">Summer</button>
+                            <button class="btn">Autumn</button>
+                        </div>
                     </div>
                     <div class="tabs-content">
                         <img src="assets/img/img1.jpg" alt="photo">
@@ -173,9 +191,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
-                <div class="footer__inner-copy"><span>©</span><span>2022</span><a
-                        href="https://github.com/diXrom" target="_blank">github</a></div>
-                <div class="footer__inner-rss"><a href="https://rs.school/js-stage0/" target="_blank">Rolling Scopes School</a></div>
+                <div class="footer__inner-copy"><span>©</span><span>2022</span><a href="https://github.com/diXrom"
+                        target="_blank">github</a></div>
+                <div class="footer__inner-rss"><a href="https://rs.school/js-stage0/" target="_blank">Rolling Scopes
+                        School</a></div>
                 <div class="footer__inner-contacts">
                     <ul>
                         <li><a href="#"><svg class="icon">

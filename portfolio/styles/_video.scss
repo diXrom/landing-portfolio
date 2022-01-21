@@ -4,40 +4,79 @@
     padding-top: 100px;
     padding-bottom: 60px;
 
+    width: 50%;
+    margin: 0 auto;
+
     font-family: Merriweather;
     font-weight: bold;
     font-size: 26px;
     line-height: 80px;
     text-align: center;
     color: $gold;
+
+    overflow-x: hidden;
+    @media (max-width: 768px) {
+      padding-top: 80px;
+      padding-bottom: 50px;
+      font-size: 22px;
+      width: 50%;
+      margin: 0 167px 0 187px;
+    }
+    @media (max-width: 750px) {
+      width: 50%;
+      margin: 0 auto;
+    }
+    
     &::after {
       content: "";
       display: block;
       height: 2px;
-      width: 274px;
+      width: 39%;
 
       position: absolute;
       top: 58%;
-      right: 25%;
+      right: 0;
 
       background-color: $gold;
+      @media (max-width: 1268px) {
+        width: 32%;
+      }
+      @media (max-width: 768px) {
+        top: 56.5%;
+      }
+      @media (max-width: 700px) {
+        width: 25%;
+      }
     }
     &::before {
       content: "";
       display: block;
       height: 2px;
-      width: 274px;
+      width: 39%;
 
       position: absolute;
       top: 58%;
-      left: 25%;
+      left: 0;
 
       background-color: $gold;
+      @media (max-width: 1268px) {
+        width: 32%;
+      }
+      @media (max-width: 768px) {
+        top: 56.5%;
+      }
+      @media (max-width: 700px) {
+        width: 25%;
+      }
     }
   }
 }
 .video-content {
   position: relative;
+  @media (max-width: 768px) {
+    margin: 0 -20px;
+    overflow-x: hidden;
+  }
   &__btn {
     position: absolute;
     top: 50%;
@@ -49,7 +88,24 @@
     .icon {
       width: 130px;
       height: 130px;
-      transform: translate(-54%,-57%);
+      
+      transform: translate(-54%, -57%);
+      @media (max-width: 768px) {
+        width: 65px;
+        height: 65px;
+
+        transform: translate(-49%, -64%);
+      }
+    }
+  }
+  &__player {
+    @media (min-width: 769px) {
+      width: 100%;
+      max-width: 1400px;
+    }
+    @media (max-width: 768px) {
+      max-width: 808px;
+      height: 418px;
     }
   }
 }
