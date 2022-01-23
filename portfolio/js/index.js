@@ -117,7 +117,7 @@ function changeTheme() {
         iconSvg.setAttribute('xlink:href', `assets/svg/sprite.svg#${theme}`);
         arrItems.forEach(item => item.classList.toggle('light-theme'));
     }
-    if (localStorage.getItem('theme')) {
+    if (localStorage.getItem('theme')== 'moon') {
         toggleTheme(localStorage.getItem('theme'));
     }
 }
