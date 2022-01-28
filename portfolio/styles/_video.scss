@@ -26,7 +26,7 @@
       width: 50%;
       margin: 0 auto;
     }
-    
+
     &::after {
       content: "";
       display: block;
@@ -73,10 +73,7 @@
 }
 .video-content {
   position: relative;
-  @media (max-width: 768px) {
-    margin: 0 -20px;
-    overflow-x: hidden;
-  }
+
   &__btn {
     position: absolute;
     top: 50%;
@@ -88,7 +85,7 @@
     .icon {
       width: 130px;
       height: 130px;
-      
+
       transform: translate(-54%, -57%);
       @media (max-width: 768px) {
         width: 65px;
@@ -106,6 +103,13 @@
     @media (max-width: 768px) {
       max-width: 808px;
       height: 418px;
+      position: relative;
+      left: -20px;
+    }
+    @media (max-width: 767px) {
+      max-width: 100%;
+      height: auto;
+      left: 20px;
     }
   }
 }

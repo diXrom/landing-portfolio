@@ -269,6 +269,7 @@ body {
   html,
   body {
     overflow-x: hidden;
+    position: relative;
   }
 }
 
@@ -278,9 +279,9 @@ body {
   padding: 0 20px;
 }
 
-@media (max-width: 485px) {
+@media (max-width: 768px) {
   .container {
-    overflow-x: hidden;
+    padding-right: 40px;
   }
 }
 
@@ -408,23 +409,17 @@ body {
 
 @media (max-width: 350px) {
   .header__inner {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    text-align: start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: start;
-  }
-}
-
-@media (max-width: 350px) {
-  .header__inner > * {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -588,6 +583,12 @@ body {
 @media (max-width: 768px) {
   .lang {
     margin-left: auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .lang {
+    margin-left: 0;
   }
 }
 
@@ -884,7 +885,7 @@ body {
 
 .content__item__title {
   margin-bottom: 15px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.4px;
 }
 
@@ -1065,6 +1066,13 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .tabs-content img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 /*========================== VIDEO =======================================================================*/
 .video__inner .title {
   position: relative;
@@ -1160,13 +1168,6 @@ body {
   position: relative;
 }
 
-@media (max-width: 768px) {
-  .video-content {
-    margin: 0 -20px;
-    overflow-x: hidden;
-  }
-}
-
 .video-content__btn {
   position: absolute;
   top: 50%;
@@ -1202,6 +1203,16 @@ body {
   .video-content__player {
     max-width: 808px;
     height: 418px;
+    position: relative;
+    left: -20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-content__player {
+    max-width: 100%;
+    height: auto;
+    left: 20px;
   }
 }
 
@@ -1279,6 +1290,7 @@ body {
 @media (max-width: 1268px) {
   .price__inner .title::after {
     width: 33%;
+    top: 55%;
   }
 }
 
@@ -1315,6 +1327,7 @@ body {
 @media (max-width: 1268px) {
   .price__inner .title::before {
     width: 33%;
+    top: 55%;
   }
 }
 
