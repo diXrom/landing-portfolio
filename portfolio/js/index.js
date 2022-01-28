@@ -1,45 +1,126 @@
 console.log(`
 Оценка на 85/75.
 
-1.Вёрстка соответствует макету. Ширина экрана 768px +48
-    - блок <header> +6
-    - секция hero +6
-    - секция skills +6
-    - секция portfolio +6
-    - секция video +6
-    - секция price +6
-    - секция contacts +6
-    - блок <footer> +6
-2.Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки +15
-    - нет полосы прокрутки при ширине страницы от 1440рх до 768рх +5
-    - нет полосы прокрутки при ширине страницы от 768рх до 480рх +5
-    - нет полосы прокрутки при ширине страницы от 480рх до 320рх +5
-3.На ширине экрана 768рх и меньше реализовано адаптивное меню +22
-    - при ширине страницы 768рх панель навигации скрывается, появляется бургер-иконка +2
-    - при нажатии на бургер-иконку справа плавно появляется адаптивное меню, бургер-иконка изменяется на крестик +4
-    - высота адаптивного меню занимает всю высоту экрана. При ширине экрана 768-620рх вёрстка меню соответствует макету, когда экран становится уже, меню занимает всю ширину экрана +4
-    - при нажатии на крестик адаптивное меню плавно скрывается уезжая за правую часть экрана, крестик превращается в бургер-иконку +4
-    - бургер-иконка, которая при клике превращается в крестик, создана при помощи css-анимаций без использования изображений +2
-    - ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям +2
-    - при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, крестик превращается в бургер-иконку +4
+1.Смена изображений в секции portfolio +25
+    - при кликах по кнопкам Winter, Spring, Summer, Autumn в секции portfolio отображаются изображения из папки с соответствующим названием +20
+    - кнопка, по которой кликнули, становится активной т.е. выделяется стилем. Другие кнопки при этом будут неактивными +5
+
+2.Перевод страницы на два языка +25
+    - при клике по надписи ru англоязычная страница переводится на русский язык +10
+    - при клике по надписи en русскоязычная страница переводится на английский язык +10
+    - надписи en или ru, соответствующие текущему языку страницы, становятся активными т.е. выделяются стилем +5
+
+3.Переключение светлой и тёмной темы +25
+    - тёмная тема приложения сменяется светлой +10
+    - светлая тема приложения сменяется тёмной +10
+    - после смены светлой и тёмной темы интерактивные элементы по-прежнему изменяют внешний вид при наведении и клике и при этом остаются видимыми на странице (нет ситуации с белым шрифтом на белом фоне) +5
+
+4. Дополнительный функционал: выбранный пользователем язык отображения страницы и светлая или тёмная тема сохраняются при перезагрузке страницы +5
+5. Дополнительный функционал: сложные эффекты для кнопок при наведении и/или клике +5
 `);
-const hamburger = document.querySelector('.hamburger'),
-    lang = document.querySelector('.lang'),
-    hamburgerNav = document.querySelector('.hamburger-nav'),
-    hamburgerList = document.querySelector('.hamburger-nav__list');
+import i18Obj from './translate.js';
 
-const toogleMenu = () => {
-    hamburgerNav.classList.toggle('active');
-    hamburger.classList.toggle('active');
-    lang.classList.toggle('hide');
-}
+function changeLanguage() {
+    const langBtn = document.querySelector('.lang'),
+        langBtns = document.querySelectorAll('.lang__item');
 
-hamburger.addEventListener('click', toogleMenu);
-hamburgerList.addEventListener('click', (e) => {
-
-    if (e.target && e.target.closest('.hamburger-nav__link a')) {
-        hamburgerNav.classList.remove('active');
-        hamburger.classList.remove('active');
-        lang.classList.remove('hide');
+    if (localStorage.getItem('lang')) {
+        switchingLanguage(localStorage.getItem('lang'))
     }
-});
+
+    langBtn.addEventListener('click', (e) => {
+        const target = e.target;
+        if (!target.closest('.lang__item')) return;
+        localStorage.setItem('lang', target.innerHTML);
+        switchingLanguage(target.innerHTML)
+    });
+    function switchingLanguage(lang) {
+        const texts = document.querySelectorAll('[data-i18]'),
+            forms = document.querySelectorAll("[data-i19]");
+        langBtns.forEach(item => item.classList.remove('active'))
+        document.querySelector(`.lang__${lang}`).classList.add('active');
+        texts.forEach(item => item.textContent = i18Obj[lang][item.dataset.i18]);
+        forms.forEach(item => item.setAttribute('placeholder', i18Obj[lang][item.dataset.i19]))
+    }
+}
+changeLanguage();
+function showBurgerMenu() {
+    const hamburger = document.querySelector('.hamburger'),
+        lang = document.querySelector('.lang'),
+        hamburgerNav = document.querySelector('.hamburger-nav'),
+        iconBtn = document.querySelector('.icon-btn'),
+        hamburgerList = document.querySelector('.hamburger-nav__list');
+
+    const toogleMenu = () => {
+        hamburgerNav.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        lang.classList.toggle('hide');
+        iconBtn.classList.toggle('hide');
+    }
+
+    hamburger.addEventListener('click', toogleMenu);
+    hamburgerList.addEventListener('click', (e) => {
+
+        if (e.target && e.target.closest('.hamburger-nav__link a')) {
+            hamburgerNav.classList.remove('active');
+            hamburger.classList.remove('active');
+            lang.classList.remove('hide');
+            iconBtn.classList.remove('hide');
+        }
+    });
+}
+showBurgerMenu();
+function toggleTabs() {
+    const tabsBtn = document.querySelector('.tabs'),
+        btns = document.querySelectorAll('.tabs .btn'),
+        tabContents = document.querySelectorAll('.tabs-content img');
+
+    if (localStorage.getItem('season')) {
+        showTabsImages('active', localStorage.getItem('season'));
+    }
+
+    function showTabsImages(selector, localItem) {
+        btns.forEach(item => item.classList.remove(selector));
+        document.querySelector(`[data-i18=${localItem}]`).classList.add(selector);
+        tabContents.forEach((item, i) => item.src = `./assets/img/${localItem}/${++i}.jpg`)
+    }
+
+    tabsBtn.addEventListener('click', (e) => {
+        const target = e.target;
+        if (!target.closest('.btn')) return;
+        localStorage.setItem('season', target.dataset.i18);
+        showTabsImages('active', localStorage.getItem('season'));
+    });
+}
+toggleTabs();
+function changeTheme() {
+    const sections = document.querySelectorAll('section'),
+        icons = document.querySelectorAll('.icon'),
+        title = document.querySelectorAll('.title'),
+        header = document.querySelector('header'),
+        footer = document.querySelector('footer'),
+        iconBtn = document.querySelector('.icon-btn'),
+        iconSvg = document.querySelector('.icon-link'),
+        arrItems = [...sections, ...icons, ...title, header, footer, iconBtn];
+
+    iconBtn.addEventListener('click', () => {
+        if (iconBtn.classList.contains('light-theme')) {
+            toggleTheme('sun');
+            localStorage.setItem('theme', 'sun');
+            return;
+        }
+        toggleTheme('moon');
+        localStorage.setItem('theme', 'moon');
+    });
+
+    function toggleTheme(theme) {
+        iconSvg.setAttribute('xlink:href', `assets/svg/sprite.svg#${theme}`);
+        arrItems.forEach(item => item.classList.toggle('light-theme'));
+    }
+    if (localStorage.getItem('theme')== 'moon') {
+        toggleTheme(localStorage.getItem('theme'));
+    }
+}
+changeTheme();
+
+

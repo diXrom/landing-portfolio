@@ -93,4 +93,39 @@
       }
     }
   }
+  &.light-theme {
+    background: white url("../assets/img/bg2-white.jpg") center center/auto
+      700px no-repeat;
+
+    @media (max-width: 768px) {
+      background-size: 1200px 600px;
+      background-position: center 43px;
+    }
+    h2 {
+      color: $mate;
+    }
+    input {
+      color: $mate;
+      background: rgba(255, 255, 255, 0.5);
+    }
+    textarea {
+      color: $mate;
+      background: rgba(255, 255, 255, 0.5);
+    }
+    input::placeholder {
+      color: $mate;
+    }
+    textarea::placeholder {
+      color: $mate;
+    }
+    .btn.active {
+      background-color: $white;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      &:hover {
+        background: $mate;
+        color: $gold;
+        box-shadow: 0 1em 1.5em -0.4em #6085ff;
+      }
+    }
+  }
 }

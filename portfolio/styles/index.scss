@@ -2,6 +2,7 @@
 $black: #000000;
 $white: #ffffff;
 $gold: #bdae82;
+$mate: #1c1c1c;
 
 @font-face {
   font-family: Merriweather;
@@ -67,6 +68,13 @@ body {
   &:hover {
     fill: $gold;
   }
+  &.light-theme {
+    fill: $mate;
+    background-color: transparent;
+    &:hover {
+      fill: $gold;
+    }
+  }
 }
 .btn {
   height: 55px;
@@ -74,19 +82,22 @@ body {
 
   font-family: inherit;
 
-  border: 0;
-  background-color: $gold;
+  background-color: transparent;
+  border: 2px solid $gold;
+  color: $gold;
+
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 
   &.active {
-    color: $gold;
-
-    background-color: transparent;
-    border: 2px solid $gold;
+    background-color: $gold;
+    border: 0;
+    color: $black;
   }
   &:hover {
-    color: $white;
+    color:$white;
+    box-shadow: 0 1em 1.5em -0.4em #6085ff;
+    transform: translatey(-0.65em);
   }
 }
 .hide {
@@ -112,3 +123,20 @@ body {
 @import "_contacts";
 /*========================== FOOTER ======================================================================*/
 @import "_footer";
+
+.light-theme {
+  background-color: $white;
+  color: $mate;
+  &.title {
+    background-color: none;
+    color: $mate;
+    &::after,
+    &::before {
+      background-color: $mate;
+    }
+  }
+}
+
+.light-theme:hover {
+  color: $mate;
+}
