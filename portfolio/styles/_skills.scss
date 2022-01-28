@@ -2,76 +2,7 @@
   @media (max-width: 768px) {
     padding: 0 20px;
   }
-  .title {
-    position: relative;
 
-    padding-top: 100px;
-    padding-bottom: 60px;
-    width: 50%;
-    margin: 0 auto;
-
-    font-family: Merriweather;
-    font-weight: bold;
-    font-size: 26px;
-    line-height: 80px;
-    text-align: center;
-    color: $gold;
-
-    overflow-x: hidden;
-    @media (max-width: 768px) {
-      padding-top: 50px;
-      padding-bottom: 44px;
-      font-size: 22px;
-      width: 55%;
-      margin: 0 167px 0 160px;
-    }
-    @media (max-width: 750px) {
-      width: 50%;
-      margin: 0 auto;
-    }
-    &::after {
-      content: "";
-      display: block;
-      height: 2px;
-      width: 36%;
-
-      position: absolute;
-      top: 58%;
-      right: 0;
-
-      background-color: $gold;
-      @media (max-width: 1268px) {
-        width: 32%;
-      }
-      @media (max-width: 768px) {
-        top: 51%;
-      }
-      @media (max-width: 700px) {
-        width: 25%;
-      }
-    }
-    &::before {
-      content: "";
-      display: block;
-      height: 2px;
-      width: 36%;
-
-      position: absolute;
-      top: 58%;
-      left: 0;
-
-      background-color: $gold;
-      @media (max-width: 1268px) {
-        width: 32%;
-      }
-      @media (max-width: 768px) {
-        top: 51%;
-      }
-      @media (max-width: 700px) {
-        width: 25%;
-      }
-    }
-  }
 }
 .content {
   display: flex;

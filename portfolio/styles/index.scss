@@ -51,6 +51,9 @@ body {
     overflow-x: hidden;
     position: relative;
   }
+  &.light-theme {
+    background: $white;
+  }
 }
 .container {
   max-width: 1440px;
@@ -95,7 +98,7 @@ body {
     color: $black;
   }
   &:hover {
-    color:$white;
+    color: $white;
     box-shadow: 0 1em 1.5em -0.4em #6085ff;
     transform: translatey(-0.65em);
   }
@@ -139,4 +142,34 @@ body {
 
 .light-theme:hover {
   color: $mate;
+}
+.title {
+  padding: 80px 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 50%;
+  margin: 20px auto 62px auto;
+
+  font-family: Merriweather;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 80px;
+  text-align: center;
+  color: $gold;
+  &::after,
+  &::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    max-width: 274px;
+    margin: 0 20px;
+
+    background-color: $gold;
+  }
+  @media (max-width: 768px) {
+    font-size: 22px;
+    line-height: 60px;
+    margin: 15px auto 32px auto;
+  }
 }

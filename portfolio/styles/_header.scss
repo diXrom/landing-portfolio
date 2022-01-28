@@ -2,7 +2,7 @@
   background: url(../assets/img/bg1.jpg) no-repeat center 0;
   @media (max-width: 768px) {
     height: 30px;
-    background-position: -5px -30px;
+    background-position: center -30px;
     background-size: auto 620px;
   }
   &__inner {
@@ -26,7 +26,7 @@
       transition: fill 0.3s ease-in-out;
       cursor: pointer;
 
-      @media (max-width: 768px) {
+      @media (max-width: 770px) {
         margin-left: 13px;
       }
       &:hover {
@@ -42,7 +42,6 @@
           fill: $gold;
         }
       }
-      
     }
     @media (max-width: 350px) {
       justify-content: center;
@@ -172,6 +171,9 @@
 }
 .hamburger:hover {
   cursor: pointer;
+  & .line {
+    background-color: $gold;
+  }
 }
 .hamburger.active .line:nth-child(2) {
   opacity: 0;

@@ -50,12 +50,20 @@ function showBurgerMenu() {
         hamburgerNav = document.querySelector('.hamburger-nav'),
         iconBtn = document.querySelector('.icon-btn'),
         hamburgerList = document.querySelector('.hamburger-nav__list');
-
+    let flag = true;
     const toogleMenu = () => {
         hamburgerNav.classList.toggle('active');
         hamburger.classList.toggle('active');
         lang.classList.toggle('hide');
         iconBtn.classList.toggle('hide');
+        if (flag) {
+            flag = false;
+            document.documentElement.style.overflow = 'hidden';
+        }
+        else {
+            flag = true;
+            document.documentElement.style.overflow = '';
+        }
     }
 
     hamburger.addEventListener('click', toogleMenu);
@@ -95,13 +103,14 @@ function toggleTabs() {
 toggleTabs();
 function changeTheme() {
     const sections = document.querySelectorAll('section'),
+        body = document.body,
         icons = document.querySelectorAll('.icon'),
         title = document.querySelectorAll('.title'),
         header = document.querySelector('header'),
         footer = document.querySelector('footer'),
         iconBtn = document.querySelector('.icon-btn'),
         iconSvg = document.querySelector('.icon-link'),
-        arrItems = [...sections, ...icons, ...title, header, footer, iconBtn];
+        arrItems = [...sections, ...icons, ...title, header, footer, iconBtn, body];
 
     iconBtn.addEventListener('click', () => {
         if (iconBtn.classList.contains('light-theme')) {
@@ -117,7 +126,7 @@ function changeTheme() {
         iconSvg.setAttribute('xlink:href', `assets/svg/sprite.svg#${theme}`);
         arrItems.forEach(item => item.classList.toggle('light-theme'));
     }
-    if (localStorage.getItem('theme')== 'moon') {
+    if (localStorage.getItem('theme') == 'moon') {
         toggleTheme(localStorage.getItem('theme'));
     }
 }
