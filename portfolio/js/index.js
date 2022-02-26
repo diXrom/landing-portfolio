@@ -131,5 +131,85 @@ function changeTheme() {
     }
 }
 changeTheme();
+function playCustomPlayer() {
+    const player = document.querySelector('.video__content'),
+        video = document.querySelector('.video__player'),
+        bigVideoBtn = player.querySelector('.video__btn'),
+        btnVideo = player.querySelector('.icon-play'),
+        btnVolume = player.querySelector('.icon-volume'),
+        btnFullscreen = player.querySelector('.icon-fullscreen'),
+        playIcon = player.querySelector('.icon-play use'),
+        volumeIcon = player.querySelector('.icon-volume use'),
+        rangeProgress = player.querySelector('.progress'),
+        rangeVolume = player.querySelector('.volume'),
+        preview = player.querySelector('.video__preview');
+    let volume;
 
+    btnFullscreen.addEventListener('click', () => {
+        if (document.fullscreenElement) {
+            document.exitFullscreen().catch((err) => console.error(err))
+        } else {
+            player.requestFullscreen();
+        }
+    });
+
+    function hidePreview() {
+        preview.classList.add('hide');
+        setTimeout(() => { preview.style.display = 'none'; }, 500);
+        toggleBtn();
+    }
+    function toggleBtn() {
+        
+        if (video.paused) {
+            video.play();
+            changeIcon(playIcon, 'pause')
+            bigVideoBtn.classList.add('hide');
+        }
+        else {
+            video.pause();
+            changeIcon(playIcon, 'play')
+            bigVideoBtn.classList.remove('hide');
+        }
+    }
+    function progressUpdate() {
+        const value = (video.currentTime / video.duration) * 100;
+        rangeProgress.value = Math.round(value);
+        if (video.currentTime >= video.duration) {
+            changeIcon(playIcon, 'play')
+            bigVideoBtn.classList.toggle('hide');
+        }
+        updateBackground(rangeProgress, Math.round(value));
+    }
+
+    function volumeUpdate(e) {
+        if (e.target.closest('.icon-volume')) {
+            if (rangeVolume.value == 0) rangeVolume.value = volume;
+            else {
+                volume = rangeVolume.value;
+                rangeVolume.value = 0;
+            }
+        }
+        video.volume = rangeVolume.value / 100 || 0;
+        if (video.volume === 0) changeIcon(volumeIcon, 'mute');
+        else changeIcon(volumeIcon, 'volume');
+        updateBackground(rangeVolume, rangeVolume.value);
+    }
+    function progressDrag(e) {
+        video.currentTime = e.target.value * (video.duration / 100);
+        updateBackground(rangeVolume, rangeVolume.value);
+        
+    }
+    const changeIcon = (selec, name) => selec.setAttribute('xlink:href', `assets/svg/sprite.svg#${name}`);
+    const updateBackground = (target, value) => target.style = `background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(189, 174, 130) 0%, rgb(189, 174, 130) ${value}%, rgb(200, 200, 200) ${value}%, rgb(200, 200, 200) 100%) repeat scroll 0% 0%`;
+
+    btnVideo.addEventListener('click', toggleBtn);
+    btnVolume.addEventListener('click', volumeUpdate);
+    bigVideoBtn.addEventListener('click', hidePreview);
+    video.addEventListener('click', toggleBtn);
+    preview.addEventListener('click', hidePreview);
+    rangeVolume.addEventListener('input', volumeUpdate);
+    rangeProgress.addEventListener('input', progressDrag);
+    video.addEventListener('timeupdate', progressUpdate);
+}
+playCustomPlayer();
 

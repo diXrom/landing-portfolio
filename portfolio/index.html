@@ -130,11 +130,18 @@
                     <div class="title">
                         <h2 data-i18="video">Video</h2>
                     </div>
-                    <div class="video-content">
-                        <img class="video-content__player" src="assets/img/video_player.jpg" alt="video">
-                        <button class="video-content__btn active"><svg class="icon">
-                                <use xlink:href="assets/svg/sprite.svg#play_unvisited"></use>
-                            </svg></button>
+                    <div class="video__content">
+                        <div class="video__preview"></div>
+                        <video class="video__player" src="./assets/video/video.mp4"></video>
+                        <div class="video__btn active"><svg class="icon"><use xlink:href="assets/svg/sprite.svg#play_unvisited"></use></svg>
+                        </div>
+                        <div class="video__controls">
+                            <svg class="icon icon-play"><use xlink:href="assets/svg/sprite.svg#play"></use></svg>
+                            <input class="progress" name="currentTime" type="range" value="0" min="0" max="100" step="1">
+                            <svg class="icon icon-volume"><use xlink:href="assets/svg/sprite.svg#volume"></use></svg>
+                            <input class="volume" name="volume"  type="range" value="50" min="0" max="100" step="1">
+                            <svg class="icon icon-fullscreen"><use xlink:href="assets/svg/sprite.svg#fullscreen"></use></svg>
+                        </div>
                     </div>
                 </div>
             </div>
