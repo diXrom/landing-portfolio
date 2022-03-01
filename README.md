@@ -1,2 +1,2 @@
-# dixrom-JSFEPRESCHOOL
-Private repository for @dixrom
+- A portfolio landing page 
+-link: https://dixrom.github.io/landing-portfolio/
