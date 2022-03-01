@@ -1,2 +1,2 @@
 - A portfolio landing page 
--link: https://dixrom.github.io/landing-portfolio/
+- Link: https://dixrom.github.io/landing-portfolio/portfolio
