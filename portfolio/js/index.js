@@ -34,7 +34,7 @@ function changeLanguage() {
         localStorage.setItem('lang', target.innerHTML);
         switchingLanguage(target.innerHTML)
     });
-    function switchingLanguage(lang) {
+    function switchingLanguage(lang = 'en') {
         const texts = document.querySelectorAll('[data-i18]'),
             forms = document.querySelectorAll("[data-i19]");
         langBtns.forEach(item => item.classList.remove('active'))
@@ -159,7 +159,7 @@ function playCustomPlayer() {
         toggleBtn();
     }
     function toggleBtn() {
-        
+
         if (video.paused) {
             video.play();
             changeIcon(playIcon, 'pause')
@@ -197,7 +197,7 @@ function playCustomPlayer() {
     function progressDrag(e) {
         video.currentTime = e.target.value * (video.duration / 100);
         updateBackground(rangeVolume, rangeVolume.value);
-        
+
     }
     const changeIcon = (selec, name) => selec.setAttribute('xlink:href', `assets/svg/sprite.svg#${name}`);
     const updateBackground = (target, value) => target.style = `background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(189, 174, 130) 0%, rgb(189, 174, 130) ${value}%, rgb(200, 200, 200) ${value}%, rgb(200, 200, 200) 100%) repeat scroll 0% 0%`;
